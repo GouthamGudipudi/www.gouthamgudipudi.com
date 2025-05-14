@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <!-- Font Awesome for Social Media Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -32,34 +32,36 @@
 
     <!-- Contact Form Section -->
     <div class="content">
-        <h1>Contact Me</h1>
-        <form action="https://formsubmit.co/341e6ea0618d27b7f8e5e18873dd7b14" method="POST" onsubmit="return showThankYouMessage()">
-            <!-- Add the hidden "_next" field to redirect to a thank you page (optional) -->
-            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html" />
+        <div class="contact-container">
+            <h1>Contact Me</h1>
+            <form action="https://formsubmit.co/341e6ea0618d27b7f8e5e18873dd7b14" method="POST" onsubmit="return showThankYouMessage()">
+                <!-- Add the hidden "_next" field to redirect to a thank you page (optional) -->
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html" />
 
-            <!-- Add the hidden "_subject" field to set a subject line for the email -->
-            <input type="hidden" name="_subject" value="New submission from your portfolio contact form" />
+                <!-- Add the hidden "_subject" field to set a subject line for the email -->
+                <input type="hidden" name="_subject" value="New submission from your portfolio contact form" />
 
-            <div class="form-group">
-                <div class="form-row">
-                    <div class="col">
-                        <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-                    </div>
-                    <div class="col">
-                        <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-                    </div>
-                    <div class="col">
-                        <input type="Phone" name="Phone" class="form-control" placeholder="Phone Number" required>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        <div class="col">
+                            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="col">
+                            <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
-            </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+                </div>
 
-            <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-        </form>
+                <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+            </form>
+        </div>
     </div>
 
     <footer>
@@ -80,6 +82,5 @@
             return true;  // Allow the form to submit
         }
     </script>
-
 </body>
 </html>
