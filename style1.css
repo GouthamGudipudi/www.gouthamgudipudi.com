@@ -7,15 +7,40 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Background Video Styling */
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Video Overlay */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+/* Header Section */
 header {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
     text-align: center;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .navbar {
@@ -52,6 +77,8 @@ header {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    position: relative;
 }
 
 .contact-container h1 {
@@ -64,13 +91,17 @@ header {
     margin-bottom: 15px;
 }
 
-label {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 5px;
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-input[type="text"], input[type="email"], textarea {
+.col {
+    flex: 1;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
@@ -78,6 +109,7 @@ input[type="text"], input[type="email"], textarea {
     border-radius: 5px;
     background-color: #fff;
     box-sizing: border-box;
+    margin: 5px 0;
 }
 
 textarea {
@@ -110,4 +142,70 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    z-index: 2;
+}
+/* Social Icons */
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icon {
+    margin: 0 15px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s, color 0.3s ease-in-out; /* Added transition */
+}
+
+/* Hover effect for social icons */
+.social-icon:hover {
+    transform: scale(1.1); /* Scale effect */
+}
+
+/* Facebook Icon Color */
+.social-icon.facebook {
+    color: #3b5998; /* Facebook Blue */
+}
+
+.social-icon.facebook:hover {
+    color: #2d4373; /* Darker blue on hover */
+}
+
+/* Instagram Icon Color */
+.social-icon.instagram {
+    color: #E4405F; /* Instagram Red-Pink */
+}
+
+.social-icon.instagram:hover {
+    color: #C13584; /* Darker pink on hover */
+}
+
+/* Twitter Icon Color */
+.social-icon.twitter {
+    color: #1DA1F2; /* Twitter Blue */
+}
+
+.social-icon.twitter:hover {
+    color: #0d95e8; /* Darker blue on hover */
+}
+
+/* Email Icon Color */
+.social-icon.email {
+    color: #D44638; /* Email Red */
+}
+
+.social-icon.email:hover {
+    color: #C13534; /* Darker red on hover */
+}
+
+/* Microsoft Teams Icon Color */
+.social-icon.teams {
+    color: #6264A7; /* Microsoft Teams Purple */
+}
+
+.social-icon.teams:hover {
+    color: #4C4F8C; /* Darker purple on hover */
+}
+
+.social-icon i {
+    margin: 0;
 }
